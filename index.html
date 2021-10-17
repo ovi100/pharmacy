@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Required CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
+
+    <title>Health Care</title>
+</head>
+
+<body>
+
+    <div id="header-desktop" class="header header-slide">
+        <div class="header-top">
+            <div class="content-wrapper vt-middle-align">
+                <div class="logo">
+                    <a href="">
+                        <img class="img-responsive" src="images/logo.jpg">
+                    </a>
+                </div>
+                <div class="searchbox-holder" id="searchbox-holder">
+                    <div class="searchbox" id="searchbox">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control search-input"
+                                    placeholder="Search by product or collection name">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <svg height="25px" width="25px" viewBox="0 0 512 512">
+                                            <path
+                                                d="M448.3,424.7L335,311.3c20.8-26,33.3-59.1,33.3-95.1c0-84.1-68.1-152.2-152-152.2c-84,0-152,68.2-152,152.2  s68.1,152.2,152,152.2c36.2,0,69.4-12.7,95.5-33.8L425,448L448.3,424.7z M120.1,312.6c-25.7-25.7-39.8-59.9-39.8-96.3  s14.2-70.6,39.8-96.3S180,80,216.3,80c36.3,0,70.5,14.2,96.2,39.9s39.8,59.9,39.8,96.3s-14.2,70.6-39.8,96.3  c-25.7,25.7-59.9,39.9-96.2,39.9C180,352.5,145.8,338.3,120.1,312.6z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="header-icon vt-middle-align">
+                    <div class="user">
+                        <div class="user-icon">
+                            <svg viewBox="0 0 50 50" height="26px" width="26px">
+                                <path
+                                    d="M30.933,32.528c-0.146-1.612-0.09-2.737-0.09-4.21c0.73-0.383,2.038-2.825,2.259-4.888c0.574-0.047,1.479-0.607,1.744-2.818  c0.143-1.187-0.425-1.855-0.771-2.065c0.934-2.809,2.874-11.499-3.588-12.397c-0.665-1.168-2.368-1.759-4.581-1.759  c-8.854,0.163-9.922,6.686-7.981,14.156c-0.345,0.21-0.913,0.878-0.771,2.065c0.266,2.211,1.17,2.771,1.744,2.818  c0.22,2.062,1.58,4.505,2.312,4.888c0,1.473,0.055,2.598-0.091,4.21C19.367,37.238,7.546,35.916,7,45h38  C44.455,35.916,32.685,37.238,30.933,32.528z" />
+                            </svg>
+                            <span>Sign In</span>
+                        </div>
+                        <div class="user-option">
+                            <a href="">
+                                <svg viewBox="0 0 30 30" height="18px" width="18px">
+                                    <path
+                                        d="M24,16v10c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V16h8v9h2v-9H24z M14,9H5c-0.6,0-1,0.4-1,1v3c0,0.6,0.4,1,1,1h9V9  z M25,9h-9v5h9c0.6,0,1-0.4,1-1v-3C26,9.4,25.6,9,25,9z M22.1,7.9l0.1-0.4c0.4-1,0.3-2.2-0.3-3.1C21.3,3.5,20.2,3,19.1,3  c-1.4,0-2.6,0.8-3.1,2.1l-2,4.9H19C20.3,10,21.6,9.2,22.1,7.9z M17.9,5.8C18.1,5.3,18.6,5,19.1,5c0.4,0,0.8,0.2,1.1,0.6  c0.2,0.4,0.3,0.8,0.1,1.2l-0.1,0.4C20,7.7,19.5,8,19,8h-2L17.9,5.8z M14,5.1C13.5,3.8,12.2,3,10.9,3C9.8,3,8.7,3.5,8.1,4.5  C7.5,5.4,7.4,6.5,7.8,7.6l0.1,0.4C8.4,9.2,9.7,10,11,10h4.9L14,5.1z M12.1,5.8L13,8h-2c-0.5,0-1-0.3-1.2-0.8L9.6,6.8  C9.5,6.4,9.5,5.9,9.8,5.6C10,5.2,10.4,5,10.9,5C11.4,5,11.9,5.3,12.1,5.8z" />
+                                </svg>
+                                my orders
+                            </a>
+                            <a href="">
+                                <svg height="18" viewBox="0 0 1792 1792" width="18">
+                                    <path
+                                        d="M1600 1405q0 120-73 189.5t-194 69.5h-874q-121 0-194-69.5t-73-189.5q0-53 3.5-103.5t14-109 26.5-108.5 43-97.5 62-81 85.5-53.5 111.5-20q9 0 42 21.5t74.5 48 108 48 133.5 21.5 133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5t-271.5 112.5-271.5-112.5-112.5-271.5 112.5-271.5 271.5-112.5 271.5 112.5 112.5 271.5z" />
+                                </svg>
+                                my profile
+                            </a>
+                            <hr>
+                            <a href="" class="register-link">sign up</a>
+                            <a href="" class="tbtn btn-solid">login</a>
+                        </div>
+                    </div>
+                    <div class="cart-icon">
+                        <svg viewBox="0 0 20 20" height="36px" width="36px">
+                            <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+                                <g fill="none" id="Core" transform="translate(-212.000000, -422.000000)">
+                                    <g id="shopping-cart" transform="translate(212.000000, 422.000000)">
+                                        <path
+                                            d="M6,16 C4.9,16 4,16.9 4,18 C4,19.1 4.9,20 6,20 C7.1,20 8,19.1 8,18 C8,16.9 7.1,16 6,16 L6,16 Z M0,0 L0,2 L2,2 L5.6,9.6 L4.2,12 C4.1,12.3 4,12.7 4,13 C4,14.1 4.9,15 6,15 L18,15 L18,13 L6.4,13 C6.3,13 6.2,12.9 6.2,12.8 L6.2,12.7 L7.1,11 L14.5,11 C15.3,11 15.9,10.6 16.2,10 L19.8,3.5 C20,3.3 20,3.2 20,3 C20,2.4 19.6,2 19,2 L4.2,2 L3.3,0 L0,0 L0,0 Z M16,16 C14.9,16 14,16.9 14,18 C14,19.1 14.9,20 16,20 C17.1,20 18,19.1 18,18 C18,16.9 17.1,16 16,16 L16,16 Z"
+                                            id="Shape" />
+                                    </g>
+                                </g>
+                            </g>
+                            <text x="8" y="9" font-size="6px" fill="#fff" class="cart-count">1</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="header-desktop" class="header">
+        <div class="header-top">
+            <div class="content-wrapper vt-middle-align">
+                <div class="logo">
+                    <a href="">
+                        <img class="img-responsive" src="images/logo.jpg">
+                    </a>
+                </div>
+                <div class="searchbox-holder" id="searchbox-holder">
+                    <div class="searchbox" id="searchbox">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control search-input"
+                                    placeholder="Search by product or collection name">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <svg height="25px" width="25px" viewBox="0 0 512 512">
+                                            <path
+                                                d="M448.3,424.7L335,311.3c20.8-26,33.3-59.1,33.3-95.1c0-84.1-68.1-152.2-152-152.2c-84,0-152,68.2-152,152.2  s68.1,152.2,152,152.2c36.2,0,69.4-12.7,95.5-33.8L425,448L448.3,424.7z M120.1,312.6c-25.7-25.7-39.8-59.9-39.8-96.3  s14.2-70.6,39.8-96.3S180,80,216.3,80c36.3,0,70.5,14.2,96.2,39.9s39.8,59.9,39.8,96.3s-14.2,70.6-39.8,96.3  c-25.7,25.7-59.9,39.9-96.2,39.9C180,352.5,145.8,338.3,120.1,312.6z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="header-icon vt-middle-align">
+                    <div class="user">
+                        <div class="user-icon">
+                            <svg viewBox="0 0 50 50" height="26px" width="26px">
+                                <path
+                                    d="M30.933,32.528c-0.146-1.612-0.09-2.737-0.09-4.21c0.73-0.383,2.038-2.825,2.259-4.888c0.574-0.047,1.479-0.607,1.744-2.818  c0.143-1.187-0.425-1.855-0.771-2.065c0.934-2.809,2.874-11.499-3.588-12.397c-0.665-1.168-2.368-1.759-4.581-1.759  c-8.854,0.163-9.922,6.686-7.981,14.156c-0.345,0.21-0.913,0.878-0.771,2.065c0.266,2.211,1.17,2.771,1.744,2.818  c0.22,2.062,1.58,4.505,2.312,4.888c0,1.473,0.055,2.598-0.091,4.21C19.367,37.238,7.546,35.916,7,45h38  C44.455,35.916,32.685,37.238,30.933,32.528z" />
+                            </svg>
+                            <span>Sign In</span>
+                        </div>
+                        <div class="user-option">
+                            <a href="">
+                                <svg viewBox="0 0 30 30" height="18px" width="18px">
+                                    <path
+                                        d="M24,16v10c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V16h8v9h2v-9H24z M14,9H5c-0.6,0-1,0.4-1,1v3c0,0.6,0.4,1,1,1h9V9  z M25,9h-9v5h9c0.6,0,1-0.4,1-1v-3C26,9.4,25.6,9,25,9z M22.1,7.9l0.1-0.4c0.4-1,0.3-2.2-0.3-3.1C21.3,3.5,20.2,3,19.1,3  c-1.4,0-2.6,0.8-3.1,2.1l-2,4.9H19C20.3,10,21.6,9.2,22.1,7.9z M17.9,5.8C18.1,5.3,18.6,5,19.1,5c0.4,0,0.8,0.2,1.1,0.6  c0.2,0.4,0.3,0.8,0.1,1.2l-0.1,0.4C20,7.7,19.5,8,19,8h-2L17.9,5.8z M14,5.1C13.5,3.8,12.2,3,10.9,3C9.8,3,8.7,3.5,8.1,4.5  C7.5,5.4,7.4,6.5,7.8,7.6l0.1,0.4C8.4,9.2,9.7,10,11,10h4.9L14,5.1z M12.1,5.8L13,8h-2c-0.5,0-1-0.3-1.2-0.8L9.6,6.8  C9.5,6.4,9.5,5.9,9.8,5.6C10,5.2,10.4,5,10.9,5C11.4,5,11.9,5.3,12.1,5.8z" />
+                                </svg>
+                                my orders
+                            </a>
+                            <a href="">
+                                <svg height="18" viewBox="0 0 1792 1792" width="18">
+                                    <path
+                                        d="M1600 1405q0 120-73 189.5t-194 69.5h-874q-121 0-194-69.5t-73-189.5q0-53 3.5-103.5t14-109 26.5-108.5 43-97.5 62-81 85.5-53.5 111.5-20q9 0 42 21.5t74.5 48 108 48 133.5 21.5 133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5t-271.5 112.5-271.5-112.5-112.5-271.5 112.5-271.5 271.5-112.5 271.5 112.5 112.5 271.5z" />
+                                </svg>
+                                my profile
+                            </a>
+                            <hr>
+                            <a href="" class="register-link">sign up</a>
+                            <a href="" class="tbtn btn-solid">login</a>
+                        </div>
+                    </div>
+                    <div class="cart-icon">
+                        <svg viewBox="0 0 20 20" height="36px" width="36px">
+                            <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+                                <g fill="none" id="Core" transform="translate(-212.000000, -422.000000)">
+                                    <g id="shopping-cart" transform="translate(212.000000, 422.000000)">
+                                        <path
+                                            d="M6,16 C4.9,16 4,16.9 4,18 C4,19.1 4.9,20 6,20 C7.1,20 8,19.1 8,18 C8,16.9 7.1,16 6,16 L6,16 Z M0,0 L0,2 L2,2 L5.6,9.6 L4.2,12 C4.1,12.3 4,12.7 4,13 C4,14.1 4.9,15 6,15 L18,15 L18,13 L6.4,13 C6.3,13 6.2,12.9 6.2,12.8 L6.2,12.7 L7.1,11 L14.5,11 C15.3,11 15.9,10.6 16.2,10 L19.8,3.5 C20,3.3 20,3.2 20,3 C20,2.4 19.6,2 19,2 L4.2,2 L3.3,0 L0,0 L0,0 Z M16,16 C14.9,16 14,16.9 14,18 C14,19.1 14.9,20 16,20 C17.1,20 18,19.1 18,18 C18,16.9 17.1,16 16,16 L16,16 Z"
+                                            id="Shape" />
+                                    </g>
+                                </g>
+                            </g>
+                            <text x="8" y="9" font-size="6px" fill="#fff" class="cart-count">1</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="parentLink">
+                    <a href="">home</a>
+                </div>
+                <div class="parentLink">
+                    <a href="">features</a>
+                    <div class="child-content">
+                        <div class="grand-child-content">
+                            <div class="menuLinkList">
+                                <a class="noLink">child link 1</a>
+                                <a href="">grand child link 1</a>
+                                <a href="">grand child link 2</a>
+                                <a href="">grand child link 3</a>
+                                <a href="">grand child link 4</a>
+                            </div>
+                            <div class="menuLinkList">
+                                <a class="noLink">child link 2</a>
+                                <a href="">grand child link 1</a>
+                                <a href="">grand child link 2</a>
+                                <a href="">grand child link 3</a>
+                                <a href="">grand child link 4</a>
+                                <a href="">grand child link 5</a>
+                            </div>
+                            <div class="menuLinkList">
+                                <a class="noLink">child link 3</a>
+                                <a href="">grand child link 1</a>
+                                <a href="">grand child link 2</a>
+                                <a href="">grand child link 3</a>
+                            </div>
+                            <div class="menuLinkList">
+                                <a class="noLink">child link 4</a>
+                                <a href="">grand child link 1</a>
+                                <a href="">grand child link 2</a>
+                                <a href="">grand child link 3</a>
+                                <a href="">grand child link 4</a>
+                                <a href="">grand child link 5</a>
+                                <a href="">grand child link 6</a>
+                                <a href="">grand child link 7</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="parentLink">
+                    <a href="">shop</a>
+                </div>
+                <div class="parentLink">
+                    <a href="">blog</a>
+                </div>
+                <div class="parentLink">
+                    <a href="">stores</a>
+                </div>
+                <div class="parentLink">
+                    <a href="">others</a>
+                </div>
+                <div class="parentLink">
+                    <a href="">about</a>
+                </div>
+                <div class="parentLink">
+                    <a href="">contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- Start Home Slider -->
+        <div class="home-slider gap-top">
+            <div class="content-wrapper">
+                <div id="homeCarousel" class="carousel slide" data-ride="carousel">                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <a href="">
+                                <img class="img-responsive" src="https://placehold.jp/1920x400.jpg" alt="Slider Image">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img class="img-responsive" src="https://placehold.jp/1920x400.jpg" alt="Slider Image">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img class="img-responsive" src="https://placehold.jp/1920x400.jpg" alt="Slider Image">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img class="img-responsive" src="https://placehold.jp/1920x400.jpg" alt="Slider Image">
+                            </a>
+                        </div>                      
+                    </div>
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#homeCarousel" data-slide-to="0" class="active">
+                            this is short text for slider
+                        </li>
+                        <li data-target="#homeCarousel" data-slide-to="1">
+                            this is short text for slider
+                        </li>
+                        <li data-target="#homeCarousel" data-slide-to="2">
+                            this is short text for slider
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- End Home Slider -->
+
+        <!-- Start Home Categories 1-->
+        <div class="home-categories gap-top">
+            <div class="content-wrapper box-shadow">
+                <div class="home-categories-header">
+                    <h4 class="text-uppercase">home categories 1</h4>
+                </div>
+                <div class="home-categories-content">
+                    <div class="category-box">
+                        <a href="">
+                            <div class="image">
+                                <img src="https://placehold.jp/96x96.jpg" alt="Category Image">
+                            </div>
+                            <div class="name">
+                                category name 1
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a href="">
+                            <div class="image">
+                                <img src="https://placehold.jp/96x96.jpg" alt="Category Image">
+                            </div>
+                            <div class="name">
+                                category name 2
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a href="">
+                            <div class="image">
+                                <img src="https://placehold.jp/96x96.jpg" alt="Category Image">
+                            </div>
+                            <div class="name">
+                                category name 3
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a href="">
+                            <div class="image">
+                                <img src="https://placehold.jp/96x96.jpg" alt="Category Image">
+                            </div>
+                            <div class="name">
+                                category name 4
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a href="">
+                            <div class="image">
+                                <img src="https://placehold.jp/96x96.jpg" alt="Category Image">
+                            </div>
+                            <div class="name">
+                                category name 5
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a href="">
+                            <div class="image">
+                                <img src="https://placehold.jp/96x96.jpg" alt="Category Image">
+                            </div>
+                            <div class="name">
+                                category name 6
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a href="">
+                            <div class="image">
+                                <img src="https://placehold.jp/96x96.jpg" alt="Category Image">
+                            </div>
+                            <div class="name">
+                                category name 7
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a href="">
+                            <div class="image">
+                                <img src="https://placehold.jp/96x96.jpg" alt="Category Image">
+                            </div>
+                            <div class="name">
+                                category name 8
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a href="">
+                            <div class="image">
+                                <img src="https://placehold.jp/96x96.jpg" alt="Category Image">
+                            </div>
+                            <div class="name">
+                                category name 9
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a href="">
+                            <div class="image">
+                                <img src="https://placehold.jp/96x96.jpg" alt="Category Image">
+                            </div>
+                            <div class="name">
+                                category name 10
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Collection Slider 1-->
+
+        <!-- Start Custom Image and Text Section 1-->
+        <div class="custom-image-text vartical-gap">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-6 col-md-push-6 col-sm-12 col-xs-12">
+                        <div class="custom-image">
+                            <img class="img-responsive" src="https://placehold.jp/800x400.jpg" alt="Custom Image 1">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-pull-6 col-sm-12 col-xs-12">
+                        <div class="custom-text">
+                            <h2>custom text 1</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                                nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+                                tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+                                quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
+                                sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                                recusandae alias error harum maxime adipisci amet laborum.
+                            </p>
+                            <a href="" class="tbtn btn-solid">shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Custom Image and Text Section 1-->
+
+        <!-- Start Collection Slider 2-->
+        <div class="home-collection-slider vartical-gap">
+            <div class="content-wrapper">
+                <div class="home-collection-slider-header">
+                    <h3 class="text-center text-uppercase">
+                        <span class="prev">
+                            <svg height="30px" viewBox="0 0 1792 1792" width="30px">
+                                <path
+                                    d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z" />
+                            </svg>
+                        </span>
+                        <a href="">collection slider</a>
+                        <span class="next">
+                            <svg height="30px" viewBox="0 0 1792 1792" width="30px">
+                                <path
+                                    d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z" />
+                            </svg>
+                        </span>
+                    </h3>
+                </div>
+                <div class="home-collection-slider-content">
+                    <div class="collection-slider">
+                        <div class="product-box">
+                            <div class="photo">
+                                <a href="">
+                                    <img class="img-responsive" src="https://placehold.jp/1000x1000.jpg">
+                                </a>
+                                <div class="tag">
+                                    <span class="tag-new">new</span>
+                                    <span class="tag-sale">-20%</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="stock-info">
+                                    <span>sold out</span>
+                                </div>
+                                <div class="name">
+                                    <a href="" class="line-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </div>
+                                <div class="price">
+                                    <span><span>&#2547;</span> 14000</span>
+                                    <s><span>&#2547;</span> 15000</s>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box">
+                            <div class="photo">
+                                <a href="">
+                                    <img class="img-responsive" src="https://placehold.jp/1000x1000.jpg">
+                                </a>
+                                <div class="tag">
+                                    <span class="tag-new">new</span>
+                                    <span class="tag-sale">-20%</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="stock-info">
+                                    <span>3 in stock</span>
+                                </div>
+                                <div class="name">
+                                    <a href="" class="line-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit.</a>
+                                </div>
+                                <div class="price">
+                                    <span><span>&#2547;</span> 14000</span>
+                                    <s><span>&#2547;</span> 15000</s>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box">
+                            <div class="photo">
+                                <a href="">
+                                    <img class="img-responsive" src="https://placehold.jp/1000x1000.jpg">
+                                </a>
+                                <div class="tag">
+                                    <span class="tag-new">new</span>
+                                    <span class="tag-sale">-20%</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="stock-info">
+                                    <span>sold out</span>
+                                </div>
+                                <div class="name">
+                                    <a href="" class="line-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit.</a>
+                                </div>
+                                <div class="price">
+                                    <span><span>&#2547;</span> 14000</span>
+                                    <s><span>&#2547;</span> 15000</s>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box">
+                            <div class="photo">
+                                <a href="">
+                                    <img class="img-responsive" src="https://placehold.jp/1000x1000.jpg">
+                                </a>
+                                <div class="tag">
+                                    <span class="tag-new">new</span>
+                                    <span class="tag-sale">-20%</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="stock-info">
+                                    <span>3 in stock</span>
+                                </div>
+                                <div class="name">
+                                    <a href="" class="line-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit.</a>
+                                </div>
+                                <div class="price">
+                                    <span><span>&#2547;</span> 14000</span>
+                                    <s><span>&#2547;</span> 15000</s>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box">
+                            <div class="photo">
+                                <a href="">
+                                    <img class="img-responsive" src="https://placehold.jp/1000x1000.jpg">
+                                </a>
+                                <div class="tag">
+                                    <span class="tag-new">new</span>
+                                    <span class="tag-sale">-20%</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="stock-info">
+                                    <span>sold out</span>
+                                </div>
+                                <div class="name">
+                                    <a href="" class="line-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit.</a>
+                                </div>
+                                <div class="price">
+                                    <span><span>&#2547;</span> 14000</span>
+                                    <s><span>&#2547;</span> 15000</s>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box">
+                            <div class="photo">
+                                <a href="">
+                                    <img class="img-responsive" src="https://placehold.jp/1000x1000.jpg">
+                                </a>
+                                <div class="tag">
+                                    <span class="tag-new">new</span>
+                                    <span class="tag-sale">-20%</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="stock-info">
+                                    <span>3 in stock</span>
+                                </div>
+                                <div class="name">
+                                    <a href="" class="line-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit.</a>
+                                </div>
+                                <div class="price">
+                                    <span><span>&#2547;</span> 14000</span>
+                                    <s><span>&#2547;</span> 15000</s>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Collection Slider 2-->
+
+        <!-- Start Custom Image and Text Section 2-->
+        <div class="custom-image-text vartical-gap">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="custom-image">
+                            <img class="img-responsive" src="https://placehold.jp/800x400.jpg" alt="Custom Image 2">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="custom-text">
+                            <h2>custom text 2</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                                nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+                                tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+                                quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
+                                sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                                recusandae alias error harum maxime adipisci amet laborum.
+                            </p>
+                            <a href="" class="tbtn btn-solid">shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Custom Image and Text Section 2-->
+
+        <!-- Start Home Services Section -->
+        <div class="home-services">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="service-box">
+                            <div class="icon">
+                                <svg id="shield" viewBox="0 0 318 318" width="40" height="40">
+                                    <path d="M159 318l-3-1c-33-10-62-31-84-61-18-23-32-52-43-86C12 112 12 61 12 59c0-5 4-9 9-10 0 0 78-8 132-47 4-3 8-3 12 0 54 39 132 47 132 47 5 1 9 5 9 10 0 2 0 53-17 111-11 34-25 63-43 86a171 171 0 0 1-87 62zM32 68c1 17 4 55 16 97 22 70 59 114 111 132 52-18 89-62 111-133 12-41 15-79 16-96-22-3-80-14-127-45C112 54 54 65 32 68z"></path><path d="M154 208c-3 0-5-1-7-3l-36-31c-4-3-4-10-1-14 4-4 10-5 14-1l28 24 56-73c4-4 10-5 14-2 5 3 5 10 2 14l-62 82c-1 2-4 3-7 4h-1z"></path>
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4>100% secure</h4>
+                                <p>100% payments protection</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="service-box">
+                            <div class="icon">
+                                <svg id="giving-cash" viewBox="0 0 297 297" width="40" height="40">
+                                    <path d="M287 5H10C5 5 0 9 0 15v134c0 6 5 10 10 10h51v40c0 26 17 39 33 42v41c0 6 4 10 10 10s10-4 10-10v-50c0-5-4-10-10-10-4 0-23-1-23-23v-40h85c-3 6-6 14-6 23a10 10 0 1 0 21 0c0-21 19-23 23-23 5 0 10-4 10-10V99c0-6 5-12 12-12h5c7 0 12 6 12 12v83s0 11-5 21c-6 13-18 19-34 19-6 0-10 5-10 10v50c0 6 4 10 10 10 5 0 10-4 10-10v-40c24-3 36-18 42-30 8-15 8-29 8-30v-23h23c5 0 10-4 10-10V15c0-6-5-10-10-10zm-56 62h-5c-18 0-32 15-32 32v40H44l-24-23V49l24-24h209l24 24v67l-13 12V99c0-17-15-32-33-32z"></path><path d="M149 39a43 43 0 1 0 43 43c0-24-20-43-44-43zm0 66c-13 0-23-10-23-23 0-12 10-23 23-23s23 11 23 23c0 13-11 23-23 23zM74 72H41c-6 0-11 4-11 10s5 10 11 10h33c5 0 10-4 10-10s-5-10-10-10z"></path>
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4>cash on delivery</h4>
+                                <p>get first, pay later</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="service-box">
+                            <div class="icon">
+                                <svg id="return" viewBox="0 0 497 497" width="40" height="40">
+                                    <path d="M249 89V0L121 128l128 127V140c84 0 153 69 153 153s-69 153-153 153c-85 0-153-69-153-153H45A204 204 0 1 0 249 89z"></path>
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4>easy return</h4>
+                                <p>easy return & refund</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="service-box">
+                            <div class="icon">
+                                <svg id="support" viewBox="0 0 612 612" width="40" height="40">
+                                    <path d="M258 336a31 31 0 1 1-63 0 31 31 0 0 1 63 0zm127-31a31 31 0 1 0 0 62 31 31 0 0 0 0-62zm227 14v59c0 30-24 55-54 55h-40c-39 108-138 173-212 173S133 541 94 433H54c-30 0-54-25-54-55v-59c0-21 12-39 28-48 1-85 26-151 74-197C150 29 219 6 306 6s156 23 204 68c48 46 73 112 74 197 16 9 28 27 28 48zm-115 17l-2-40c-24-22-68-38-123-45 8 9 14 19 18 33-34-26-101-20-151-79l-7-10c-9-12-12-19-13-11-1 68-50 122-103 129l-1 23c0 29 5 56 13 79 30 37 80 47 124 50 8-13 27-22 48-22 30 0 53 17 53 37 0 21-23 38-53 38-22 0-41-10-49-24-31-2-65-7-95-22 43 63 109 96 150 96 65 0 191-82 191-232zm54-72c-4-148-88-226-245-226S65 116 61 264h21c8-50 24-91 48-122 39-50 98-76 176-76s137 26 176 76c24 31 40 72 48 122h21z"></path>
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4>help center</h4>
+                                <p>call: 0123456789 for help</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Home Services Section -->
+    </div>
+
+    <!-- Start Footer Section -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                            optio, eaque rerum! Provident similique accusantium nemo autem.
+                        </p>
+                        <div class="footer-logo">
+                            <a href="">
+                                <img class="img-responsive" src="images/logo.jpg">
+                            </a>
+                        </div>
+                        <div class="social-link">
+                            <a href="">
+                                <svg height="23px" viewBox="0 0 512 512" width="23px">
+                                    <path
+                                        d="m475.074219 0h-438.148438c-20.394531 0-36.925781 16.53125-36.925781 36.925781v438.148438c0 20.394531 16.53125 36.925781 36.925781 36.925781h236.574219v-198h-66.5v-77.5h66.5v-57.035156c0-66.140625 40.378906-102.140625 99.378906-102.140625 28.257813 0 52.542969 2.105469 59.621094 3.046875v69.128906h-40.683594c-32.101562 0-38.316406 15.253906-38.316406 37.640625v49.359375h76.75l-10 77.5h-66.75v198h121.574219c20.394531 0 36.925781-16.53125 36.925781-36.925781v-438.148438c0-20.394531-16.53125-36.925781-36.925781-36.925781zm0 0" />
+                                </svg>
+                            </a>
+                            <a href="">
+                                <svg height="23px" viewBox="0 0 512 512" width="23px">
+                                    <path
+                                        d="m373.40625 0h-234.8125c-76.421875 0-138.59375 62.171875-138.59375 138.59375v234.816406c0 76.417969 62.171875 138.589844 138.59375 138.589844h234.816406c76.417969 0 138.589844-62.171875 138.589844-138.589844v-234.816406c0-76.421875-62.171875-138.59375-138.59375-138.59375zm108.578125 373.410156c0 59.867188-48.707031 108.574219-108.578125 108.574219h-234.8125c-59.871094 0-108.578125-48.707031-108.578125-108.574219v-234.816406c0-59.871094 48.707031-108.578125 108.578125-108.578125h234.816406c59.867188 0 108.574219 48.707031 108.574219 108.578125zm0 0" />
+                                    <path
+                                        d="m256 116.003906c-77.195312 0-139.996094 62.800782-139.996094 139.996094s62.800782 139.996094 139.996094 139.996094 139.996094-62.800782 139.996094-139.996094-62.800782-139.996094-139.996094-139.996094zm0 249.976563c-60.640625 0-109.980469-49.335938-109.980469-109.980469 0-60.640625 49.339844-109.980469 109.980469-109.980469 60.644531 0 109.980469 49.339844 109.980469 109.980469 0 60.644531-49.335938 109.980469-109.980469 109.980469zm0 0" />
+                                    <path
+                                        d="m399.34375 66.285156c-22.8125 0-41.367188 18.558594-41.367188 41.367188 0 22.8125 18.554688 41.371094 41.367188 41.371094s41.371094-18.558594 41.371094-41.371094-18.558594-41.367188-41.371094-41.367188zm0 52.71875c-6.257812 0-11.351562-5.09375-11.351562-11.351562 0-6.261719 5.09375-11.351563 11.351562-11.351563 6.261719 0 11.355469 5.089844 11.355469 11.351563 0 6.257812-5.09375 11.351562-11.355469 11.351562zm0 0" />
+                                </svg>
+                            </a>
+                            <a href="">
+                                <svg height="27px" viewBox="0 0 512 512" width="27px" style="margin-top: 6px;">
+                                    <path
+                                        d="m334.808594 170.992188-113.113282-61.890626c-6.503906-3.558593-14.191406-3.425781-20.566406.351563-6.378906 3.78125-10.183594 10.460937-10.183594 17.875v122.71875c0 7.378906 3.78125 14.046875 10.117188 17.832031 3.308594 1.976563 6.976562 2.96875 10.652344 2.96875 3.367187 0 6.742187-.832031 9.847656-2.503906l113.117188-60.824219c6.714843-3.613281 10.90625-10.59375 10.9375-18.222656.027343-7.628906-4.113282-14.640625-10.808594-18.304687zm-113.859375 63.617187v-91.71875l84.539062 46.257813zm0 0" />
+                                    <path
+                                        d="m508.234375 91.527344-.023437-.234375c-.433594-4.121094-4.75-40.777344-22.570313-59.421875-20.597656-21.929688-43.949219-24.59375-55.179687-25.871094-.929688-.105469-1.78125-.203125-2.542969-.304688l-.894531-.09375c-67.6875-4.921874-169.910157-5.5937495-170.933594-5.59765575l-.089844-.00390625-.089844.00390625c-1.023437.00390625-103.246094.67578175-171.542968 5.59765575l-.902344.09375c-.726563.097657-1.527344.1875-2.398438.289063-11.101562 1.28125-34.203125 3.949219-54.859375 26.671875-16.972656 18.445312-21.878906 54.316406-22.382812 58.347656l-.058594.523438c-.152344 1.714844-3.765625 42.539062-3.765625 83.523437v38.3125c0 40.984375 3.613281 81.808594 3.765625 83.527344l.027344.257813c.433593 4.054687 4.746093 40.039062 22.484375 58.691406 19.367187 21.195312 43.855468 24 57.027344 25.507812 2.082031.238282 3.875.441406 5.097656.65625l1.183594.164063c39.082031 3.71875 161.617187 5.550781 166.8125 5.625l.15625.003906.15625-.003906c1.023437-.003907 103.242187-.675781 170.929687-5.597657l.894531-.09375c.855469-.113281 1.816406-.214843 2.871094-.324218 11.039062-1.171875 34.015625-3.605469 54.386719-26.019532 16.972656-18.449218 21.882812-54.320312 22.382812-58.347656l.058594-.523437c.152344-1.71875 3.769531-42.539063 3.769531-83.523438v-38.3125c-.003906-40.984375-3.617187-81.804687-3.769531-83.523437zm-26.238281 121.835937c0 37.933594-3.3125 77-3.625 80.585938-1.273438 9.878906-6.449219 32.574219-14.71875 41.5625-12.75 14.027343-25.847656 15.417969-35.410156 16.429687-1.15625.121094-2.226563.238282-3.195313.359375-65.46875 4.734375-163.832031 5.460938-168.363281 5.488281-5.082032-.074218-125.824219-1.921874-163.714844-5.441406-1.941406-.316406-4.039062-.558594-6.25-.808594-11.214844-1.285156-26.566406-3.042968-38.371094-16.027343l-.277344-.296875c-8.125-8.464844-13.152343-29.6875-14.429687-41.148438-.238281-2.710937-3.636719-42.238281-3.636719-80.703125v-38.3125c0-37.890625 3.304688-76.914062 3.625-80.574219 1.519532-11.636718 6.792969-32.957031 14.71875-41.574218 13.140625-14.453125 26.996094-16.054688 36.160156-17.113282.875-.101562 1.691407-.195312 2.445313-.292968 66.421875-4.757813 165.492187-5.464844 169.046875-5.492188 3.554688.023438 102.589844.734375 168.421875 5.492188.808594.101562 1.691406.203125 2.640625.3125 9.425781 1.074218 23.671875 2.699218 36.746094 16.644531l.121094.128906c8.125 8.464844 13.152343 30.058594 14.429687 41.75.226563 2.558594 3.636719 42.171875 3.636719 80.71875zm0 0" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                        <h4 class="footer-header">company</h4>
+                        <ul class="footer-link">
+                            <li>
+                                <a href="">home</a>
+                            </li>
+                            <li>
+                                <a href="">about us</a>
+                            </li>
+                            <li>
+                                <a href="">contact us</a>
+                            </li>
+                            <li>
+                                <a href="">terms & conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix visible-sm"></div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                        <h4 class="footer-header">quick link</h4>
+                        <ul class="footer-link">
+                            <li>
+                                <a href="">login</a>
+                            </li>
+                            <li>
+                                <a href="">sign up</a>
+                            </li>
+                            <li>
+                                <a href="">My Cart</a>
+                            </li>
+                            <li>
+                                <a href="">Checkout</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <h4 class="footer-header">newsletter</h4>
+                        <p>Sign up for new product alerts, blogs, DIYs and free printables and downloads!</p>
+                        <div class="newsletter-form">
+                            <input type="email" class="form-control" id="email" placeholder="enter email">
+                            <button type="button" class="tbtn btn-solid">sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-sm-6 col-sm-push-6 col-xs-12">
+                    <div class="payment-sslcom">
+                        <img class="img-responsive" src="images/ssl-long.png" alt="Payment Gateway">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-pull-6 col-xs-12">
+                    <p>&copy; 2021 Store name.Powered by <a href="">Storrea</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Section -->
+
+    <!-- Required JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/fancybox.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
