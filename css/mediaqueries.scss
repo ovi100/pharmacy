@@ -8,9 +8,9 @@
 
 $phone: '(min-width: 320px) and (max-width: 767px)';
 
-$tablet: '(min-width: 768px) and (max-width: 991px)';
+$tablet: '(min-width: 768px) and (max-width: 992px)';
 
-$laptop: '(min-width: 992px) and (max-width: 1200px)';
+$laptop: '(min-width: 993px) and (max-width: 1200px)';
 
 $desktop: '(min-width: 1201px) and (max-width: 1900px)';
 
@@ -177,9 +177,14 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
     // Layout Style
     .header{
         .header-top{
-            .searchbox-holder{
-                .searchbox{
-                    width: 100%;
+            .header-icon{
+                div{
+                    width: 80px;
+                }
+                .user{
+                    .user-option{
+                        left: -120px;
+                    }
                 }
             }
         }
@@ -333,12 +338,22 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
     // Common Style
     
     // Layout Page
-    .header{
-        .header-content{
-            .menu{
-                .menu-items{
-                    li{
-                        margin-right: 15px;
+    
+    // Index Page
+    // Index Page
+    .home-collection-slider{
+        .home-collection-slider-content{
+            .left{
+                width: 200px;
+            }
+            .right{
+                padding-left: 200px;
+                .collection-slider{
+                    .slick-slide{
+                        .product-box{
+                            width: 145px !important;
+                            height: 230px;
+                        }
                     }
                 }
             }
@@ -379,10 +394,26 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
 
 @include respond-to($desktop){
     // Common Style
-    .content-wrapper{
-        width: 90%;
-    }
     
+    // Index Page
+    .home-collection-slider{
+        .home-collection-slider-content{
+            .left{
+                width: 200px;
+            }
+            .right{
+                padding-left: 200px;
+                .collection-slider{
+                    .slick-slide{
+                        .product-box{
+                            width: 145px !important;
+                            height: 230px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     // Product Page
     .product-details-page{

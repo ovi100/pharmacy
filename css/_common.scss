@@ -4,7 +4,6 @@
     box-sizing: border-box; 
 }
 
-
 ul li {list-style: none;}
 
 .modal-open{
@@ -117,6 +116,13 @@ a{
 
 .content-padding{
     padding: 20px 15px !important;
+}
+
+.circle{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .box-shadow{
