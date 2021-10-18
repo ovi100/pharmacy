@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+  .product-box .content {
+    padding: 10px; }
+
   body {
     overflow-x: hidden; }
 
@@ -162,8 +165,11 @@
     .home-mobile-slider .slick-slide .item {
       width: 300px !important; }
 
-  .home-categories .home-categories-content {
+  .home-categories .home-categories-content .category-box-slider {
     display: block; }
+
+  .home-brands .home-brands-content .home-brands-slider .slick-slide {
+    margin: 5px; }
 
   .home-collection-slider .home-collection-slider-content .left {
     position: relative;
@@ -184,7 +190,7 @@
     .home-collection-slider .home-collection-slider-content .right .arrow {
       display: none; }
     .home-collection-slider .home-collection-slider-content .right .collection-slider .slick-slide .product-box {
-      width: 155px !important; }
+      width: 133px !important; }
 
   .home-discount .content-wrapper, .home-ad-banner .content-wrapper {
     display: block;

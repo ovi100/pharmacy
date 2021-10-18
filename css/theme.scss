@@ -429,9 +429,12 @@ body{
         }
     }
     .home-categories-content{
-        @include flexbox;
-        @include flex-wrap(wrap);
         padding: 15px 15px 0;
+
+        .category-box-slider{
+            @include flexbox;
+            @include flex-wrap(wrap);
+        }
 
         .category-box{
             flex: 0 0 12.5%;

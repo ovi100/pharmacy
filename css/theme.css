@@ -678,14 +678,15 @@ body {
   .home-categories .home-categories-header h4 {
     font-size: 16px; }
 .home-categories .home-categories-content {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   padding: 15px 15px 0; }
+  .home-categories .home-categories-content .category-box-slider {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
   .home-categories .home-categories-content .category-box {
     flex: 0 0 12.5%;
     margin-bottom: 15px; }

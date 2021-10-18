@@ -22,6 +22,11 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
 
 @include respond-to($phone){
     // Common Style
+    .product-box{
+        .content{
+            padding: 10px;
+        }
+    }
     body{
         overflow-x: hidden;
     }
@@ -199,7 +204,18 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
     }
     .home-categories{
         .home-categories-content{
-            display: block;
+            .category-box-slider{
+                display: block;
+            }
+        }
+    }
+    .home-brands{
+        .home-brands-content{
+            .home-brands-slider{
+                .slick-slide{
+                    margin: 5px;
+                }
+            }
         }
     }
     .home-collection-slider{
@@ -230,7 +246,7 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
                 .collection-slider{
                     .slick-slide{
                         .product-box{
-                            width: 155px !important;
+                            width: 133px !important;
                         }
                     }
                 }
