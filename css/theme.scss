@@ -18,13 +18,14 @@ body{
 
 .down{
     .header-slide{
+        top: 0;
         @include translate(0,0);
     }
 }
 
 .header-slide{
     position: fixed;
-    top: 0;
+    top: -5px;
     left: 0;
     right: 0;
     @include translate(0,-100%);
@@ -40,17 +41,6 @@ body{
     .header-top{
         .content-wrapper{
             @include justify-content(space-between);
-        }
-
-        .sidenav-toggle{
-            display: none;
-            span{
-                display: block;
-                width: 22px;
-                height: 2px;
-                background:#f1e8e8;
-                margin-bottom: 5px;
-            }
         }
         .logo{
             img{
@@ -322,6 +312,10 @@ body{
     }
 }
 
+.header-mobile{
+    display: none;
+}
+
 .footer{
     border-top: 3px solid $theme-color;
     .footer-content{
@@ -374,8 +368,10 @@ body{
     padding: 15px 0;
 
     .content-wrapper{
-        @include flexbox;
-        @include align-items(center);
+        .row{
+            @include flexbox;
+            @include align-items(center);
+        }
     }
 
     p{

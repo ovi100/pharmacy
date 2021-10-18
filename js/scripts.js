@@ -2,21 +2,25 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
       $("body").addClass('down');
+      $(".floating-mheader").removeClass('slideUp');
+      $(".floating-mheader").addClass('slideDown');
     } else {
       $("body").removeClass('down');
+      $(".floating-mheader").addClass('slideUp');
+      $(".floating-mheader").removeClass('slideDown');
     }
   });
 
-  $(".search-icon").click(function (event) {
+  $(".mSearchBox").click(function (event) {
     event.preventDefault();
-    $("#searchbox-holder").addClass("show-searchbox-holder");
-    $(".search-input").focus();
+    $("body").addClass('scroll-off');
+    $(".mSearch-option").fadeIn("slow");
   });
 
-  $(".search-close").click(function (event) {
+  $(".mSearch-close").click(function (event) {
     event.preventDefault();
-    $("#searchbox-holder").removeClass("show-searchbox-holder");
-    $(".search-input").blur();
+    $("body").removeClass('scroll-off');
+    $(".mSearch-option").fadeOut("slow");
   });
 
   $(".search-input").focus(function () {
@@ -50,6 +54,36 @@ $(document).ready(function () {
     $("body").removeClass("scroll-off");
   });
 
+  if ($(window).width() < 1024) {
+    $('.home-mobile-slider').slick({
+      arrows: false,
+      autoplay: true,
+      infinite: true,
+      autoplaySpeed: 2000,
+      slidesToShow: 1,
+      centerMode: true,
+      variableWidth: true
+    });
+
+    $('.category-box-slider').slick({
+      arrows: false,
+      dots: false,
+      infinite: false,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      speed: 500,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        }
+      ]
+    });
+  }
+
   // Home Brands slider
 
   $('.home-brands-slider').slick({
@@ -62,7 +96,16 @@ $(document).ready(function () {
       {
         breakpoint: 1366,
         settings: {
-          slidesToShow: 6
+          slidesToShow: 6,
+          slidesToScroll: 6
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          slidesToShow: 3,
+          slidesToScroll: 3
         }
       }
     ]
@@ -93,6 +136,13 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
         }
       }
     ]
