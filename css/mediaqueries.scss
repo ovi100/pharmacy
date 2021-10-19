@@ -292,18 +292,39 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
         }
     }
     
-    // Product Page
+    // Product Details Page
     .product-details-page{
+        .pd-mobile-slider{
+            margin-bottom: 15px;
+            .slick-prev{
+                left: -10px;
+                z-index: 10;
+            }
+            .slick-next{
+                right: -10px;
+                z-index: 10;
+            }
+            .slick-prev:before, 
+            .slick-next:before{
+                color: $bcolor;
+            }
+        }
         .product-details{
-            .content-wrapper{
-                width: 95%;
+            .col-md-6{
+                padding-left: 15px;
+                padding-right: 15px;
             }
             .product-description{
                 .quantity-row{
                     .quantity-box{
                         .quantity-input{
-                            flex: 0.2;
+                            flex: 0.95;
                         }
+                    }
+                }
+                .cart-buttons{
+                    button{
+                        flex: 0.5;
                     }
                 }
             }
@@ -633,15 +654,31 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
     
     // Product Details Page
     .product-details-page{
+        .pd-mobile-slider{
+            margin-bottom: 15px;
+            .slick-prev{
+                left: -10px;
+                z-index: 10;
+            }
+            .slick-next{
+                right: -10px;
+                z-index: 10;
+            }
+            .slick-prev:before, 
+            .slick-next:before{
+                color: $bcolor;
+            }
+        }
         .product-details{
-            .content-wrapper {
-                width: 90%;
+            .col-md-6{
+                padding-left: 15px;
+                padding-right: 15px;
             }
             .product-description{
                 .quantity-row{
                     .quantity-box{
                         .quantity-input{
-                            flex: 0.2;
+                            flex: 0.3;
                         }
                     }
                 }

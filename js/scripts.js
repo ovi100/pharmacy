@@ -1,13 +1,28 @@
 $(document).ready(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
+      $('.scrollup').fadeIn();
       $("body").addClass('down');
       $(".floating-mheader").removeClass('slideUp');
       $(".floating-mheader").addClass('slideDown');
     } else {
+      $('.scrollup').fadeOut();
       $("body").removeClass('down');
       $(".floating-mheader").addClass('slideUp');
       $(".floating-mheader").removeClass('slideDown');
+    }
+  });
+
+  $('.scrollup').click(function () {
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+      window.scrollTo(0, 0);
+    }
+    else {
+      $('html,body').animate({
+        scrollTop: 0
+      }, 500, function () {
+        $('html,body').clearQueue();
+      });
     }
   });
 
@@ -39,11 +54,6 @@ $(document).ready(function () {
     $("#sidenav").removeClass("show-sidenav");
   });
 
-  $('.cat-list .collapse').on('shown.bs.collapse', function () {
-    $(this).parent().find(".icofont-plus").removeClass("icofont-plus").addClass("icofont-minus");
-  }).on('hidden.bs.collapse', function () {
-    $(this).parent().find(".icofont-minus").removeClass("icofont-minus").addClass("icofont-plus");
-  });
 
   $(".filter-option").click(function () {
     $(".collection-filter").addClass("show-collection-filter");
@@ -81,6 +91,12 @@ $(document).ready(function () {
           }
         }
       ]
+    });
+
+    $('.pd-mobile-slider').slick({
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1
     });
   }
 
@@ -173,6 +189,19 @@ $(document).ready(function () {
     ]
   });
 
-  $('data-fancybox').fancybox();
+  $(".pzoom").elevateZoom({
+    borderSize: 0,
+    gallery: 'thumb-control',
+    galleryActiveClass: 'active',
+    zoomWindowFadeIn: 500,
+    zoomWindowFadeOut: 500,
+    zoomWindowWidth: 880,
+    zoomWindowHeight: 520,
+    zoomWindowOffetx: 10
+  });
+
+  $('[data-fancybox]').fancybox({
+    protect: true
+  });
 
 });

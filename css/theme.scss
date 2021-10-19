@@ -384,6 +384,36 @@ body{
     }
 }
 
+.scrollup{
+    position: fixed;
+    right: 12px;
+    bottom: 135px;
+    height: 40px;
+    width: 40px;
+    background: $theme-color;
+    border: 0;
+    border-radius: 100%;
+    box-shadow: none;
+    text-align: center;
+    font-size: 25px;
+    color: $wcolor;
+    cursor: pointer;
+    display: none;
+    line-height: 52px;
+    z-index: 25;
+
+    svg{
+        fill: $wcolor;
+    }
+    
+    &:hover,
+    &:focus{
+        background: $theme-color;
+        border: 2px solid $wcolor;
+        @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+    }
+}
+
 // **********************************
 
 // CSS For Index Page
@@ -788,111 +818,230 @@ body{
 // CSS For Product Details Page
 
 .product-details-page{
-    padding: 50px 0;
+    padding: 15px 0;
+    .product-image{
+        background: $wcolor;
+        padding: 15px;
+
+        .thumb-control{
+            img{
+                height: 80px;
+                margin-top: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
     .product-details{
-        .content-wrapper{
-            width: 75%;
+        .breadcrumb{
+            margin-bottom: 10px;
+        }
+        .breadcrumb > li + li:before{
+            content: "> ";
+        }
+        .col-md-6{
+            padding-left: 0;
+            padding-right: 0;
         }
         .product-description{
+            background: $wcolor;
+            padding: 15px;
+
             .name{
-                h2{
-                    line-height: 40px;
+                @include justify-content(space-between);
+                h4{
+                    color: $gcolor;
+                    font-weight: 400;
                     margin-top: 0;
-                    text-transform: uppercase;
+                    text-transform: capitalize;
+                }
+                .icons{
+                    svg:not(last-child){
+                        margin: 0 5px;
+
+                        g{
+                            #fbbg{
+                                fill: none;
+                                @include transition(fill, 0.4s, ease);
+                            }
+                            #fbletter{
+                                fill: #3b5998;
+                                @include transition(fill, 0.4s, ease);
+                            }
+                            circle{
+                                fill: none;
+                                @include transition(fill, 0.4s, ease);
+                            }
+                            #twletter{
+                                fill: #1da1f2;
+                                @include transition(fill, 0.4s, ease);
+                            }
+                        }
+
+                        &:hover{
+                            g{
+                                #fbbg{
+                                    fill: #3b5998;
+                                }
+                                #fbletter{
+                                    fill: $wcolor;
+                                }
+                                circle{
+                                    fill: #1da1f2;
+                                }
+                                #twletter{
+                                    fill: $wcolor;
+                                }
+                            }
+                        }
+                    }
+                    #wishlist{
+                        fill: #cccccc;
+                        @include box-shadow(0 0 2px rgba(0,0,0,0.25));
+                        border-radius: 50%;
+                        padding: 3px;
+                        @include transition(fill, 0.4s, ease);
+
+                        &:hover{
+                            fill: #C0392B;
+                        }
+                    }
+                }
+            }
+            .rating-status{
+                margin-bottom: 10px;
+                svg{
+                    margin-right: 2px;
+                }
+                .rating-count{
+                    color: $gcolor;
+                    font-size: 10px;
+                    letter-spacing: 2px;
+                    margin-left: 5px;
                 }
             }
             .price{
-                border-bottom: 1px solid #ddd;
-                font-size: 23px;
-                font-weight: 500;
-                padding-bottom: 30px;
-
-                s{
-                    margin-left: 10px;
+                .old-price{
+                    color: $gcolor;
+                    font-size: 15px;
+                    font-weight: 400;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+                .current-price{
+                    color: $bcolor;
+                    font-size: 18px;
+                    font-weight: 500;
+                    @include opacity(0.7);
+                }
+                .off-tag{
+                    padding: 2px 4px;
+                    background: $theme-color;
+                    color: $wcolor;
+                    font-size: 12px;
+                    margin-left: 5px;
                 }
             }
-            .wishlist-button{
+            .variants{
                 margin-top: 15px;
-                a{
-                    color: $bcolor;
+                .variant-title{
+                    color: $gcolor;
+                    font-size: 13px;
+                    font-weight: 400;
                     text-transform: capitalize;
-                    @include transition(all, 0.5s, ease);
-
-                    &:hover,
-                    &:focus{
-                        color: $link-color;
-                        @include transition(all, 0.5s, ease);
-                    }
                 }
+                select {
+                    /* Reset */
+                    appearance: none;
+                    border: 1px solid #cccccc;
+                    outline: 0;
+                    /* Personalize */
+                    height: 40px;
+                    padding: 0 4em 0 1em;
+                    background: url(../images/caret-down.svg) no-repeat right 0.8em center / 1.4em, transparent;
+                    color: $gcolor;
+                    border-radius: 0.25em;
+                    box-shadow: none;
+                    cursor: pointer;
+                    
+                    /* Remove focus outline */
+                    &:focus {
+                      outline: none;
+                    }
+
+                    /* Remove IE arrow */
+                    &::-ms-expand {
+                      display: none;
+                    }
+                  }
             }
             .quantity-row{
                 margin: 20px 0;
                 label{
                     font-weight: 400;
-                    letter-spacing: 2px;
                     margin-bottom: 10px;
                     text-transform: capitalize;
                 }
                 .quantity-box{
                     @include flexbox;
 
-                    button{
-                        height: 48px;
-                        width: 48px;
+                    .btn-quantity{
+                        height: 40px;
+                        width: 40px;
                         background: $wcolor;
                         border: 1px solid #ccc;
-                        @include border-radius(0);
+                    }
+                    .btn-quantity:first-child{
+                        border-bottom-left-radius: 3px;
+                        border-top-left-radius: 3px;
+                    }
+                    .btn-quantity:last-child{
+                        border-bottom-right-radius: 3px;
+                        border-top-right-radius: 3px;
                     }
                     .quantity-input{
-                        flex: 0.05;
-                        height: 48px;
+                        flex: 0.06;
+                        height: 40px;
+                        border-right: 0;
+                        border-left: 0;
                         @include border-radius(0);
                         @include box-shadow(none);
-                        margin: 0 10px;
                         text-align: center;
                     }
                 }
             }
             .cart-buttons{
+                @include flexbox;
                 button{
-                    margin: 10px 0;
-                    padding: 13px 0;
-                    word-spacing: 5px;
+                    flex: 0.2;
+                    border-radius: 3px;
+                    margin-right: 10px;
+                    padding: 10px 0;
+                    text-transform: capitalize;
                 }
-            }
-            .shipping-info{
-                border-bottom: 1px solid #ddd;
-                padding-top: 20px;
-                padding-bottom: 30px;
-                p{
-                    max-width: 250px;
-                }
-            }
-            .share-buttons{
-                margin: 25px 0;
             }
         }
     }
     .related-products{
-        padding: 50px 0;
+        padding: 20px 0;
 
         .related-products-header{
             h3{
-                text-align: center;
-                text-transform: uppercase;
+                text-transform: capitalize;
             }
         }
         .related-products-content{
+            background: $wcolor;
+            padding: 20px;
             .related-product-slider{
                 .slick-slide{
-                    margin: 15px;
+                    margin: 10px;
                 }
                 .slick-prev{
-                    left: -10px;
+                    left: -15px;
                     z-index: 10;
                 }
                 .slick-next{
-                    right: -10px;
+                    right: -15px;
                     z-index: 10;
                 }
                 .slick-prev:before, 
@@ -903,7 +1052,9 @@ body{
         }
     }
 }
-
+.zoomLens{
+    display: none !important;
+}
 //CSS For Cart Page
 
 .cart-page{
