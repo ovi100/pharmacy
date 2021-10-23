@@ -600,39 +600,28 @@ body{
         .right{
             padding-left: 220px;
 
-            .arrow{
-                position: absolute;
-                top: 40%;
-                height: 50px;
-                background: #fafafa;
-                @include box-shadow(-1px 0 3px #c5c5c5);
-                cursor: pointer;
-                line-height: 70px;
-                z-index: 10;
-
-                svg{
-                    fill: #d4d4d4;
-                }
-
-                &:hover{
-                    svg{
-                        fill: $bcolor;
-                    }
-                }
-            }
-
             .next{
                 right: 0;
             }
         
             .collection-slider{
-                padding: 0 30px 0 17px;
+                padding: 10px;
                 .slick-slide{
-                    margin: 15px;
-                    .product-box{
-                        width: 220px !important;
-                        height: 245px;
-                    }
+                    margin-right: 10px;
+                }
+                .slick-arrow{
+                    position: absolute;
+                    top: 40%;
+                    height: 50px;
+                    background: #fafafa;
+                    border: 0;
+                    @include box-shadow(-1px 0 3px #c5c5c5);
+                    cursor: pointer;
+                    line-height: 70px;
+                    z-index: 10;
+                }
+                .next{
+                    right: 0;
                 }
             }
         }

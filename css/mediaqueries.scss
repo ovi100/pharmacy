@@ -22,11 +22,6 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
 
 @include respond-to($phone){
     // Common Style
-    .product-box{
-        .content{
-            padding: 10px;
-        }
-    }
     body{
         overflow-x: hidden;
     }
@@ -240,16 +235,6 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
             .right{
                 padding-left: 0;
 
-                .arrow{
-                    display: none;
-                }
-                .collection-slider{
-                    .slick-slide{
-                        .product-box{
-                            width: 133px !important;
-                        }
-                    }
-                }
             }
         }
     }
@@ -568,18 +553,6 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
             }
             .right{
                 padding-left: 0;
-
-                .arrow{
-                    display: none;
-                }
-                .collection-slider{
-                    .slick-slide{
-                        .product-box{
-                            width: 160px !important;
-                            height: 230px;
-                        }
-                    }
-                }
             }
         }
     }
@@ -741,14 +714,6 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
             }
             .right{
                 padding-left: 200px;
-                .collection-slider{
-                    .slick-slide{
-                        .product-box{
-                            width: 145px !important;
-                            height: 230px;
-                        }
-                    }
-                }
             }
         }
     }
@@ -796,14 +761,6 @@ $desktop: '(min-width: 1201px) and (max-width: 1900px)';
             }
             .right{
                 padding-left: 200px;
-                .collection-slider{
-                    .slick-slide{
-                        .product-box{
-                            width: 145px !important;
-                            height: 230px;
-                        }
-                    }
-                }
             }
         }
     }
