@@ -195,4 +195,7 @@ $(document).ready(function () {
     protect: true
   });
 
+  // Cart Modal
+  //$("#cartModal").modal();
+
 });

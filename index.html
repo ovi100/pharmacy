@@ -76,7 +76,7 @@
                                 <a href="" class="tbtn btn-solid">login</a>
                             </div>
                         </div>
-                        <div class="cart-icon">
+                        <div class="cart-icon" data-toggle="modal" data-target="#cartModal">
                             <svg viewBox="0 0 20 20" height="36px" width="36px">
                                 <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
                                     <g fill="none" id="Core" transform="translate(-212.000000, -422.000000)">
@@ -148,7 +148,7 @@
                                 <a href="" class="tbtn btn-solid">login</a>
                             </div>
                         </div>
-                        <div class="cart-icon">
+                        <div class="cart-icon" data-toggle="modal" data-target="#cartModal">
                             <svg viewBox="0 0 20 20" height="36px" width="36px">
                                 <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
                                     <g fill="none" id="Core" transform="translate(-212.000000, -422.000000)">
@@ -249,7 +249,7 @@
                 </div>
             </div>
             <div class="header-icon vt-middle-align">
-                <div class="cart-icon">
+                <div class="cart-icon" data-toggle="modal" data-target="#cartModal">
                     <svg viewBox="0 0 32 32" height="25px" width="25px">
                         <path class="cls-1" d="M10,20a1,1,0,0,1-1-.8L6.66,7.41A3,3,0,0,0,3.72,5H2A1,1,0,0,1,2,3H3.72a5,5,0,0,1,4.9,4L11,18.8A1,1,0,0,1,10.2,20Z"/>
                         <path class="cls-1" d="M11,27H9.14a4.14,4.14,0,0,1-.38-8.26l18.41-1.67L28.78,9H8A1,1,0,0,1,8,7H30a1,1,0,0,1,.77.37A1,1,0,0,1,31,8.2l-2,10a1,1,0,0,1-.89.8L8.94,20.74A2.13,2.13,0,0,0,9.14,25H11a1,1,0,0,1,0,2Z"/>
@@ -273,7 +273,7 @@
                 </a>
             </div>
             <div class="header-icon vt-middle-align">
-                <div class="cart-icon">
+                <div class="cart-icon" data-toggle="modal" data-target="#cartModal">
                     <svg viewBox="0 0 32 32" height="25px" width="25px">
                         <path class="cls-1" d="M10,20a1,1,0,0,1-1-.8L6.66,7.41A3,3,0,0,0,3.72,5H2A1,1,0,0,1,2,3H3.72a5,5,0,0,1,4.9,4L11,18.8A1,1,0,0,1,10.2,20Z"/>
                         <path class="cls-1" d="M11,27H9.14a4.14,4.14,0,0,1-.38-8.26l18.41-1.67L28.78,9H8A1,1,0,0,1,8,7H30a1,1,0,0,1,.77.37A1,1,0,0,1,31,8.2l-2,10a1,1,0,0,1-.89.8L8.94,20.74A2.13,2.13,0,0,0,9.14,25H11a1,1,0,0,1,0,2Z"/>
@@ -2242,6 +2242,138 @@
         <svg height="30" viewBox="0 0 512 512" width="30">
             <polygon points="396.6,352 416,331.3 256,160 96,331.3 115.3,352 256,201.5 "/>
         </svg>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close hidden-xs" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close visible-xs" data-dismiss="modal">
+                        <svg height="15px" viewBox="0 0 16 16" width="15px" fill="#fff">
+                            <path d="M16,7 L3.8,7 L9.4,1.4 L8,0 L0,8 L8,16 L9.4,14.6 L3.8,9 L16,9 L16,7 L16,7 Z"/>
+                        </svg>
+                    </button>
+                    <h3 class="modal-title">Shopping Cart <span class="item-count">(<span class="cart-count">1</span> items)</span></h3>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-content">
+                        <div class="cart-item-header hidden-sm hidden-xs">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-5">
+                                    <div class="cart-item-header-title">product</div>
+                                </div>
+                                <div class="col-md-2 col-sm-3">
+                                    <div class="cart-item-header-title">quantity</div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="cart-item-header-title">price</div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="cart-item-header-title text-center">total</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item-content">
+                            <div class="cart-item">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-11 col-xs-10">
+                                        <div class="item-image-name">
+                                            <div class="item-image">
+                                                <a href="">
+                                                    <img class="img-responsive" src="https://placehold.jp/1000x1000.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="item-name">
+                                                <a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1 col-xs-2 text-center visible-sm visible-xs">
+                                        <div class="item-remove-button">
+                                            <a>
+                                                <svg viewBox="0 0 32 32" fill="#808080" width="15px" height="15px">
+                                                    <g>
+                                                        <path d="M24,31H8a3,3,0,0,1-3-3V9A1,1,0,0,1,7,9V28a1,1,0,0,0,1,1H24a1,1,0,0,0,1-1V9a1,1,0,0,1,2,0V28A3,3,0,0,1,24,31Z"/>
+                                                        <path d="M28,7H4A1,1,0,0,1,4,5H28a1,1,0,0,1,0,2Z"/>
+                                                        <path d="M20,7a1,1,0,0,1-1-1V3H13V6a1,1,0,0,1-2,0V2a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1V6A1,1,0,0,1,20,7Z"/>
+                                                        <path d="M16,26a1,1,0,0,1-1-1V11a1,1,0,0,1,2,0V25A1,1,0,0,1,16,26Z"/>
+                                                        <path d="M21,24a1,1,0,0,1-1-1V13a1,1,0,0,1,2,0V23A1,1,0,0,1,21,24Z"/>
+                                                        <path d="M11,24a1,1,0,0,1-1-1V13a1,1,0,0,1,2,0V23A1,1,0,0,1,11,24Z"/>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix visible-xs" style="margin-bottom: 10px;"></div>
+                                    <div class="col-md-2 col-sm-3 col-sm-offset-7 col-xs-5 col-xs-offset-4">
+                                        <div class="item-quantity">
+                                            <div class="quantity-box">
+                                                <button type="button" class="minus">
+                                                    <svg width="15" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                                        <title>Minus</title><line x1="5" y1="12" x2="19" y2="12"></line>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" class="form-control cart-quantity-input" value="100">
+                                                <button type="button" class="plus">
+                                                    <svg width="15" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                                        <title>Plus</title><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-3">
+                                        <div class="item-price">
+                                            <div class="unit-price">
+                                                <span><span>&#2547;</span> 500</span> x <span>2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-2 col-sm-2 col-sm-offset-10 col-xs-3 col-xs-offset-9">
+                                        <div class="cart-item-header-title">
+                                            <div class="item-price">
+                                                <div class="total-price">
+                                                    <span><span>&#2547;</span> 1000</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-remove-button">
+                                                <a>
+                                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="cart-item-footer hidden-xs">
+                        <div class="subtotal">
+                            <h4>
+                                <span>grand total:</span>
+                                <span><span>&#2547;</span> 1000</span>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="cart-buttons">
+                        <h4 class="visible-xs">
+                            <span><span>&#2547;</span> 1000</span>
+                        </h4>
+                        <a href="/" class="tbtn btn-outline hidden-xs">continue shopping</a>
+                        <a href="" class="tbtn btn-solid">place order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
     </div>
 
     <!-- Required JavaScript -->
