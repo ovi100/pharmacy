@@ -400,7 +400,7 @@ body{
     cursor: pointer;
     display: none;
     line-height: 52px;
-    z-index: 25;
+    z-index: 9;
 
     svg{
         fill: $wcolor;
@@ -669,137 +669,124 @@ body{
 // CSS For Collection Page
 
 .collection{
-    .collection-name{
-        h2{
-            margin-bottom: 20px;
-            text-align: center;
-            text-transform: uppercase;
+    .collection-content{
+        //padding: 30px 0;
+        .filter-col{
+            position: sticky;
+            top: 75px;
+            padding-right: 5px;
         }
-    }
-    .collection-header{
-        .filter-sort-view-option{
-            @include flexbox;
-            @include align-items(center);
-            @include justify-content(space-between);
+        .collection-filter{
+            background: $wcolor;
 
-            .filter-option{
-                cursor: pointer;
-            }
-            .sort-option{
-                @include flexbox;
-                @include align-items(center);
-                @include justify-content(space-between);
-                flex: 0.2;
+            .filters{
+                .filters-header{
+                    padding: 15px;
 
-                select{
-                    flex: 1;
-                    height: 45px;
-                    @include border-radius(0);
-                    @include box-shadow(none);
-                    cursor: pointer;
-                    margin-left: 15px;
+                    .filter-text{
+                        font-size: 18px;
+                        text-transform: capitalize;
+                    }
+                }
+                .filters-content{
+                    .filter-option{
+                        border-top: 1px solid #ddd;
+                        padding: 10px 15px;
+
+                        .name{
+                            font-size: 15px;
+                            text-transform: uppercase;
+                        }
+                        .option{
+                            .checkbox{
+                                label{
+                                    font-size: 14px;
+                                    text-transform: capitalize;
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            .view-option{
-                ul{
+        }
+        .collection-info-col{
+            padding-left: 5px;
+        }
+        .collection-banner{
+            margin-bottom: 10px;
+        }
+        .collection-info{
+            background: $wcolor;
+
+            .collection-name{
+                padding: 15px;
+                h3{
+                    font-size: 22px;
+                    font-weight: 400;
+                    margin: 0;
+                    text-transform: capitalize;
+
+                    .collection-count{
+                        color: $gcolor;
+                    }
+                }
+            }
+            .sort-mFilter{
+                .sort{
                     @include flexbox;
                     @include align-items(center);
-                    li{
-                        a{
-                            background-color: transparent;
-                            color: $bcolor;
-                            @include flexbox;
-                            @include align-items(center);
-                            @include transition(all,0.5s,ease);
+                    border-top: 1px solid #ddd;
+                    border-bottom: 1px solid #ddd;
+                    padding: 10px 15px;
 
-                            span{
-                                margin-left: 15px;
+                    .sort-label{
+                        color: $gcolor;
+                        margin-right: 15px;
+                        text-transform: capitalize;
+                    }
+                    .sort-option{
+                        position: relative;
+
+                        .sort-option-header{
+                            display: none;
+                        }
+                        .sort-option-value{
+                            .radio-inline{
+                                margin: 0 15px;
+                                padding-left: 0;
                                 text-transform: capitalize;
-                            }
 
-                            &:hover,
-                            &:focus{
-                                background-color: transparent;
-                                color: $link-color;
-
-                                svg{
-                                    fill: $link-color
+                                input[type=radio]{
+                                    appearance: none;
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    -ms-appearance: none;
+                                    margin-left: 0;
+                                }
+                                &:hover{
+                                    color: $theme-color;
                                 }
                             }
                         }
                     }
-                    .active{
-                        a{
-                            background-color: transparent;
-                            color: $link-color;
-                            @include transition(all,0.5s,ease);
-
-                            svg{
-                                fill: $link-color
-                            }
-
-                            &:hover,
-                            &:focus{
-                                background-color: transparent;
-                                color: $link-color;
-
-                                svg{
-                                    fill: $link-color
-                                }
-                            }
-                        }
+                    .sort-overlay{
+                        display: none;
                     }
                 }
-            }
-        }
-    }
-    .collection-content{
-        padding: 30px 0;
-    }
-    .collection-filter{
-        .filters{
-            position: fixed;
-            top: 0;
-            left: -100%;
-            height: 100%;
-            width: 350px;
-            background: $wcolor;
-            padding: 20px;
-            z-index: 100;
-            @include transition(all,0.8s,ease);
-
-            .filters-header{
-                padding-bottom: 15px;
-                text-align: right;
-
-                .filter-close{
-                    cursor: pointer;
+                .mFilter{
+                    display: none;
                 }
             }
-        }
-        .filters-overlay{
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.25);
-            cursor: pointer;
-            visibility: hidden;
-            @include opacity (0);
-            z-index: 50;
-            @include transition(all,0.5s,ease);
-        }
-    }
-    .show-collection-filter{
-        .filters{
-            left: 0;
-            @include transition(all,0.8s,ease);
-        }
-        .filters-overlay{
-            visibility: visible;
-            @include opacity(1);
-            @include transition(all,0.5s,ease);
+            .collection-products{
+                @include flexbox;
+                @include flex-wrap(wrap);
+                padding: 10px;
+
+                .product-box{
+                    flex: 0 0 20%;
+                    margin: 0;
+                }
+            }
         }
     }
 }
@@ -821,12 +808,6 @@ body{
         }
     }
     .product-details{
-        .breadcrumb{
-            margin-bottom: 10px;
-        }
-        .breadcrumb > li + li:before{
-            content: "> ";
-        }
         .col-md-6{
             padding-left: 0;
             padding-right: 0;

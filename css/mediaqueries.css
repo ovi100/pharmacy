@@ -202,8 +202,203 @@
     .home-services .home-services-content .service-box:nth-child(2) {
       border-right: 0; }
 
-  .collection .collection-header .filter-sort-view-option .sort-option {
-    flex: none; }
+  .collection .content-wrapper {
+    position: unset; }
+  .collection .collection-content .filter-col {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    padding: 0;
+    z-index: 100;
+    -webkit-transition: left 0.5s linear;
+    -moz-transition: left 0.5s linear;
+    -ms-transition: left 0.5s linear;
+    -o-transition: left 0.5s linear;
+    transition: left 0.5s linear; }
+  .collection .collection-content .collection-filter .filters .filters-header {
+    background: #51C9A6;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .collection .collection-content .collection-filter .filters .filters-header .filter-text {
+      color: #ffffff;
+      margin-left: 10px; }
+  .collection .collection-content .show-collection-filter {
+    left: 0 !important;
+    -webkit-transition: left 0.5s linear;
+    -moz-transition: left 0.5s linear;
+    -ms-transition: left 0.5s linear;
+    -o-transition: left 0.5s linear;
+    transition: left 0.5s linear; }
+  .collection .collection-content .collection-info-col {
+    position: unset;
+    padding-left: 15px; }
+  .collection .collection-content .collection-info .fixed-sort {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 10; }
+  .collection .collection-content .collection-info .sort-mFilter {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between; }
+    .collection .collection-content .collection-info .sort-mFilter .sort {
+      border-top: 0;
+      border-right: 1px solid #ddd;
+      border-bottom: 0;
+      display: block;
+      flex: 0 0 50%;
+      padding: 10px; }
+      .collection .collection-content .collection-info .sort-mFilter .sort .sort-label {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-right: 0; }
+        .collection .collection-content .collection-info .sort-mFilter .sort .sort-label .icon {
+          margin-right: 10px; }
+      .collection .collection-content .collection-info .sort-mFilter .sort .sort-option {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: -100%;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        z-index: 55;
+        -webkit-transition: bottom 0.5s linear;
+        -moz-transition: bottom 0.5s linear;
+        -ms-transition: bottom 0.5s linear;
+        -o-transition: bottom 0.5s linear;
+        transition: bottom 0.5s linear; }
+        .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-header {
+          border-bottom: 1px solid #ddd;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: space-between;
+          -ms-flex-pack: space-between;
+          justify-content: space-between;
+          padding: 5px 15px; }
+          .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-header .text {
+            font-size: 17px;
+            font-weight: 500;
+            text-transform: capitalize; }
+          .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-header .icon {
+            font-size: 30px; }
+        .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-value {
+          margin-top: 15px;
+          padding: 0 20px; }
+          .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-value .radio-inline {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 15px; }
+            .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-value .radio-inline input[type=radio] {
+              appearance: auto;
+              -webkit-appearance: auto;
+              -moz-appearance: auto;
+              -ms-appearance: auto;
+              margin-left: -20px; }
+      .collection .collection-content .collection-info .sort-mFilter .sort .sort-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        z-index: -1;
+        -webkit-transition: opacity 0.2s linear;
+        -moz-transition: opacity 0.2s linear;
+        -ms-transition: opacity 0.2s linear;
+        -o-transition: opacity 0.2s linear;
+        transition: opacity 0.2s linear; }
+    .collection .collection-content .collection-info .sort-mFilter .mSort-show .sort-option {
+      bottom: -50% !important;
+      -webkit-transition: bottom 0.5s linear;
+      -moz-transition: bottom 0.5s linear;
+      -ms-transition: bottom 0.5s linear;
+      -o-transition: bottom 0.5s linear;
+      transition: bottom 0.5s linear; }
+    .collection .collection-content .collection-info .sort-mFilter .mSort-show .sort-overlay {
+      display: block;
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: alpha(opacity=100);
+      z-index: 50;
+      -webkit-transition: opacity 0.2s linear;
+      -moz-transition: opacity 0.2s linear;
+      -ms-transition: opacity 0.2s linear;
+      -o-transition: opacity 0.2s linear;
+      transition: opacity 0.2s linear; }
+    .collection .collection-content .collection-info .sort-mFilter .mFilter {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      flex: 0 0 50%;
+      padding: 10px; }
+      .collection .collection-content .collection-info .sort-mFilter .mFilter .filter-close {
+        margin-right: 10px; }
+  .collection .collection-content .collection-info .collection-products {
+    padding: 0; }
+    .collection .collection-content .collection-info .collection-products .product-box {
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid #ddd;
+      border-radius: 0;
+      flex: 0 0 50%;
+      margin: 0; }
+      .collection .collection-content .collection-info .collection-products .product-box .action-icon {
+        background: #f4f4f4;
+        visibility: visible; }
+    .collection .collection-content .collection-info .collection-products .product-box:nth-child(odd) {
+      border-right: 1px solid #ddd; }
+    .collection .collection-content .collection-info .collection-products .product-box:nth-last-child(-n+2) {
+      border-bottom: 0; }
 
   .product-details-page .pd-mobile-slider {
     margin-bottom: 15px; }
@@ -493,45 +688,105 @@
   .home-collection-slider .home-collection-slider-content .right {
     padding-left: 0; }
 
-  .collection .mobile-filter {
+  .collection .content-wrapper {
     position: unset; }
-  .collection .catalog-filter {
+  .collection .collection-content .filter-col {
     position: fixed;
     top: 0;
+    left: -100%;
     right: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
-    z-index: 100; }
-    .collection .catalog-filter .filters-accordion {
-      width: 80%;
-      max-height: 100%;
-      overflow-y: auto;
-      background: #ffffff;
-      margin: 15px auto;
-      padding: 5px 20px 20px; }
-      .collection .catalog-filter .filters-accordion .filter-header {
-        position: sticky;
-        top: -5px;
+    background: #ffffff;
+    padding: 0;
+    z-index: 100;
+    -webkit-transition: left 0.5s linear;
+    -moz-transition: left 0.5s linear;
+    -ms-transition: left 0.5s linear;
+    -o-transition: left 0.5s linear;
+    transition: left 0.5s linear; }
+  .collection .collection-content .collection-filter .filters .filters-header {
+    background: #51C9A6;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .collection .collection-content .collection-filter .filters .filters-header .filter-text {
+      color: #ffffff;
+      margin-left: 10px; }
+  .collection .collection-content .show-collection-filter {
+    left: 0 !important;
+    -webkit-transition: left 0.5s linear;
+    -moz-transition: left 0.5s linear;
+    -ms-transition: left 0.5s linear;
+    -o-transition: left 0.5s linear;
+    transition: left 0.5s linear; }
+  .collection .collection-content .collection-info-col {
+    position: unset;
+    padding-left: 15px; }
+  .collection .collection-content .collection-info .fixed-sort {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 10; }
+  .collection .collection-content .collection-info .sort-mFilter {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between; }
+    .collection .collection-content .collection-info .sort-mFilter .sort {
+      border-top: 0;
+      border-right: 1px solid #ddd;
+      border-bottom: 0;
+      display: block;
+      flex: 0 0 50%;
+      padding: 10px; }
+      .collection .collection-content .collection-info .sort-mFilter .sort .sort-label {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-right: 0; }
+        .collection .collection-content .collection-info .sort-mFilter .sort .sort-label .icon {
+          margin-right: 10px; }
+      .collection .collection-content .collection-info .sort-mFilter .sort .sort-option {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: -100%;
+        width: 100%;
+        height: 100%;
         background: #ffffff;
-        border-bottom: 1px solid #ddd;
-        margin: 0 -20px;
-        padding: 0 15px;
-        z-index: 50; }
-        .collection .catalog-filter .filters-accordion .filter-header .row {
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center; }
-      .collection .catalog-filter .filters-accordion .catalog-options {
-        margin-bottom: 10px; }
-        .collection .catalog-filter .filters-accordion .catalog-options .selected-filters {
+        z-index: 55;
+        -webkit-transition: bottom 0.5s linear;
+        -moz-transition: bottom 0.5s linear;
+        -ms-transition: bottom 0.5s linear;
+        -o-transition: bottom 0.5s linear;
+        transition: bottom 0.5s linear; }
+        .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-header {
+          border-bottom: 1px solid #ddd;
           display: -webkit-box;
           display: -moz-box;
           display: -ms-flexbox;
@@ -540,18 +795,96 @@
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-          .collection .catalog-filter .filters-accordion .catalog-options .selected-filters .remove-filter {
-            background: #000000;
-            margin: 5px 5px 5px 0px;
-            padding: 5px; }
-            .collection .catalog-filter .filters-accordion .catalog-options .selected-filters .remove-filter a {
-              color: #ffffff;
-              cursor: pointer; }
-  .collection .catalog-sort .sort-option select {
-    width: 100%;
-    height: 40px; }
+          -webkit-box-pack: space-between;
+          -ms-flex-pack: space-between;
+          justify-content: space-between;
+          padding: 5px 15px; }
+          .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-header .text {
+            font-size: 17px;
+            font-weight: 500;
+            text-transform: capitalize; }
+          .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-header .icon {
+            font-size: 30px; }
+        .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-value {
+          margin-top: 15px;
+          padding: 0 20px; }
+          .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-value .radio-inline {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 15px; }
+            .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-value .radio-inline input[type=radio] {
+              appearance: auto;
+              -webkit-appearance: auto;
+              -moz-appearance: auto;
+              -ms-appearance: auto;
+              margin-left: -20px; }
+      .collection .collection-content .collection-info .sort-mFilter .sort .sort-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        z-index: -1;
+        -webkit-transition: opacity 0.2s linear;
+        -moz-transition: opacity 0.2s linear;
+        -ms-transition: opacity 0.2s linear;
+        -o-transition: opacity 0.2s linear;
+        transition: opacity 0.2s linear; }
+    .collection .collection-content .collection-info .sort-mFilter .mSort-show .sort-option {
+      bottom: -50% !important;
+      -webkit-transition: bottom 0.5s linear;
+      -moz-transition: bottom 0.5s linear;
+      -ms-transition: bottom 0.5s linear;
+      -o-transition: bottom 0.5s linear;
+      transition: bottom 0.5s linear; }
+    .collection .collection-content .collection-info .sort-mFilter .mSort-show .sort-overlay {
+      display: block;
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: alpha(opacity=100);
+      z-index: 50;
+      -webkit-transition: opacity 0.2s linear;
+      -moz-transition: opacity 0.2s linear;
+      -ms-transition: opacity 0.2s linear;
+      -o-transition: opacity 0.2s linear;
+      transition: opacity 0.2s linear; }
+    .collection .collection-content .collection-info .sort-mFilter .mFilter {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      flex: 0 0 50%;
+      padding: 10px; }
+      .collection .collection-content .collection-info .sort-mFilter .mFilter .filter-close {
+        margin-right: 10px; }
+  .collection .collection-content .collection-info .collection-products {
+    padding: 0; }
+    .collection .collection-content .collection-info .collection-products .product-box {
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid #ddd;
+      border-radius: 0;
+      flex: 0 0 50%;
+      margin: 0; }
+      .collection .collection-content .collection-info .collection-products .product-box .action-icon {
+        background: #f4f4f4;
+        visibility: visible; }
+    .collection .collection-content .collection-info .collection-products .product-box:nth-child(odd) {
+      border-right: 1px solid #ddd; }
+    .collection .collection-content .collection-info .collection-products .product-box:nth-last-child(-n+2) {
+      border-bottom: 0; }
 
   .product-details-page .pd-mobile-slider {
     margin-bottom: 15px; }
@@ -599,6 +932,9 @@
     width: 200px; }
   .home-collection-slider .home-collection-slider-content .right {
     padding-left: 200px; }
+
+  .collection .collection-content .collection-info .collection-products .product-box {
+    flex: 0 0 25%; }
 
   .product-details-page .product-details .content-wrapper {
     width: 90%; }

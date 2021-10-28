@@ -204,6 +204,13 @@ input[type=number] {
     color: #b3b3b3;
     font-size: 80px; }
 
+.breadcrumb {
+  background-color: transparent;
+  margin-bottom: 10px; }
+
+.breadcrumb > li + li:before {
+  content: "> "; }
+
 .product-pagination {
   text-align: center; }
   .product-pagination .pagination li a {
@@ -213,6 +220,7 @@ input[type=number] {
     -ms-border-radius: 0;
     border-radius: 0;
     color: #000000;
+    margin: 0 5px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
@@ -700,7 +708,7 @@ body {
   cursor: pointer;
   display: none;
   line-height: 52px;
-  z-index: 25; }
+  z-index: 9; }
   .scrollup svg {
     fill: #ffffff; }
   .scrollup:hover, .scrollup:focus {
@@ -914,25 +922,42 @@ body {
     .home-services .home-services-content .service-box:last-child {
       border-right: 0; }
 
-.collection .collection-name h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  text-transform: uppercase; }
-.collection .collection-header .filter-sort-view-option {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between; }
-  .collection .collection-header .filter-sort-view-option .filter-option {
-    cursor: pointer; }
-  .collection .collection-header .filter-sort-view-option .sort-option {
+.collection .collection-content .filter-col {
+  position: sticky;
+  top: 75px;
+  padding-right: 5px; }
+.collection .collection-content .collection-filter {
+  background: #ffffff; }
+  .collection .collection-content .collection-filter .filters .filters-header {
+    padding: 15px; }
+    .collection .collection-content .collection-filter .filters .filters-header .filter-text {
+      font-size: 18px;
+      text-transform: capitalize; }
+  .collection .collection-content .collection-filter .filters .filters-content .filter-option {
+    border-top: 1px solid #ddd;
+    padding: 10px 15px; }
+    .collection .collection-content .collection-filter .filters .filters-content .filter-option .name {
+      font-size: 15px;
+      text-transform: uppercase; }
+    .collection .collection-content .collection-filter .filters .filters-content .filter-option .option .checkbox label {
+      font-size: 14px;
+      text-transform: capitalize; }
+.collection .collection-content .collection-info-col {
+  padding-left: 5px; }
+.collection .collection-content .collection-banner {
+  margin-bottom: 10px; }
+.collection .collection-content .collection-info {
+  background: #ffffff; }
+  .collection .collection-content .collection-info .collection-name {
+    padding: 15px; }
+    .collection .collection-content .collection-info .collection-name h3 {
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0;
+      text-transform: capitalize; }
+      .collection .collection-content .collection-info .collection-name h3 .collection-count {
+        color: #808080; }
+  .collection .collection-content .collection-info .sort-mFilter .sort {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -941,126 +966,45 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: space-between;
-    -ms-flex-pack: space-between;
-    justify-content: space-between;
-    flex: 0.2; }
-    .collection .collection-header .filter-sort-view-option .sort-option select {
-      flex: 1;
-      height: 45px;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -ms-border-radius: 0;
-      border-radius: 0;
-      -moz-box-shadow: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      cursor: pointer;
-      margin-left: 15px; }
-  .collection .collection-header .filter-sort-view-option .view-option ul {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px; }
+    .collection .collection-content .collection-info .sort-mFilter .sort .sort-label {
+      color: #808080;
+      margin-right: 15px;
+      text-transform: capitalize; }
+    .collection .collection-content .collection-info .sort-mFilter .sort .sort-option {
+      position: relative; }
+      .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-header {
+        display: none; }
+      .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-value .radio-inline {
+        margin: 0 15px;
+        padding-left: 0;
+        text-transform: capitalize; }
+        .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-value .radio-inline input[type=radio] {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -ms-appearance: none;
+          margin-left: 0; }
+        .collection .collection-content .collection-info .sort-mFilter .sort .sort-option .sort-option-value .radio-inline:hover {
+          color: #51C9A6; }
+    .collection .collection-content .collection-info .sort-mFilter .sort .sort-overlay {
+      display: none; }
+  .collection .collection-content .collection-info .sort-mFilter .mFilter {
+    display: none; }
+  .collection .collection-content .collection-info .collection-products {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .collection .collection-header .filter-sort-view-option .view-option ul li a {
-      background-color: transparent;
-      color: #000000;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-      .collection .collection-header .filter-sort-view-option .view-option ul li a span {
-        margin-left: 15px;
-        text-transform: capitalize; }
-      .collection .collection-header .filter-sort-view-option .view-option ul li a:hover, .collection .collection-header .filter-sort-view-option .view-option ul li a:focus {
-        background-color: transparent;
-        color: #ff9898; }
-        .collection .collection-header .filter-sort-view-option .view-option ul li a:hover svg, .collection .collection-header .filter-sort-view-option .view-option ul li a:focus svg {
-          fill: #ff9898; }
-    .collection .collection-header .filter-sort-view-option .view-option ul .active a {
-      background-color: transparent;
-      color: #ff9898;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-      .collection .collection-header .filter-sort-view-option .view-option ul .active a svg {
-        fill: #ff9898; }
-      .collection .collection-header .filter-sort-view-option .view-option ul .active a:hover, .collection .collection-header .filter-sort-view-option .view-option ul .active a:focus {
-        background-color: transparent;
-        color: #ff9898; }
-        .collection .collection-header .filter-sort-view-option .view-option ul .active a:hover svg, .collection .collection-header .filter-sort-view-option .view-option ul .active a:focus svg {
-          fill: #ff9898; }
-.collection .collection-content {
-  padding: 30px 0; }
-.collection .collection-filter .filters {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  height: 100%;
-  width: 350px;
-  background: #ffffff;
-  padding: 20px;
-  z-index: 100;
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -ms-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease; }
-  .collection .collection-filter .filters .filters-header {
-    padding-bottom: 15px;
-    text-align: right; }
-    .collection .collection-filter .filters .filters-header .filter-close {
-      cursor: pointer; }
-.collection .collection-filter .filters-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  visibility: hidden;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  z-index: 50;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-.collection .show-collection-filter .filters {
-  left: 0;
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -ms-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease; }
-.collection .show-collection-filter .filters-overlay {
-  visibility: visible;
-  opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 10px; }
+    .collection .collection-content .collection-info .collection-products .product-box {
+      flex: 0 0 20%;
+      margin: 0; }
 
 .product-details-page {
   padding: 15px 0; }
@@ -1071,10 +1015,6 @@ body {
       height: 80px;
       margin-top: 10px;
       margin-right: 10px; }
-  .product-details-page .product-details .breadcrumb {
-    margin-bottom: 10px; }
-  .product-details-page .product-details .breadcrumb > li + li:before {
-    content: "> "; }
   .product-details-page .product-details .col-md-6 {
     padding-left: 0;
     padding-right: 0; }

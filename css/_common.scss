@@ -219,6 +219,16 @@ input[type=number]{
     }
 }
 
+// CSS For Custom Breadcrumb
+
+.breadcrumb{
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+.breadcrumb > li + li:before{
+    content: "> ";
+}
+
 // CSS For Custom pagination
 
 .product-pagination{
@@ -229,6 +239,7 @@ input[type=number]{
                 border: 0;
                 @include border-radius(0);
                 color: $bcolor;
+                margin: 0 5px;
                 @include transition(all,0.5s,ease);
 
                 svg{
